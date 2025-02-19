@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Baseonbass!</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="plugin">
+      <div class="outer_container">
+        <div class="top_inner_container">
+          <p class="title-text">BasedonBass</p>
+          <br />
+          <!-- piano buttons-->
+          <div class="piano_keys">
+            <button class="white-key C3-key"></button>
+            <button class="black-key Db3-key"></button>
+            <button class="white-key D3-key"></button>
+            <button class="black-key Eb3-key"></button>
+            <button class="white-key E3-key"></button>
+            <button class="white-key F3-key"></button>
+            <button class="black-key Gb3-key"></button>
+            <button class="white-key G3-key"></button>
+            <button class="black-key Ab3-key"></button>
+            <button class="white-key A3-key"></button>
+            <button class="black-key Bb3-key"></button>
+            <button class="white-key B3-key"></button>
+
+            <button class="white-key C4-key"></button>
+            <button class="black-key Db4-key"></button>
+            <button class="white-key D4-key"></button>
+            <button class="black-key Eb4-key"></button>
+            <button class="white-key E4-key"></button>
+            <button class="white-key F4-key"></button>
+            <button class="black-key Gb4-key"></button>
+            <button class="white-key G4-key"></button>
+            <button class="black-key Ab4-key"></button>
+            <button class="white-key A4-key"></button>
+            <button class="black-key Bb4-key"></button>
+            <button class="white-key B4-key"></button>
+
+            <button class="white-key C5-key"></button>
+            <button class="black-key Db5-key"></button>
+            <button class="white-key D5-key"></button>
+            <button class="black-key Eb5-key"></button>
+            <button class="white-key E5-key"></button>
+            <button class="white-key F5-key"></button>
+            <button class="black-key Gb5-key"></button>
+            <button class="white-key G5-key"></button>
+            <button class="black-key Ab5-key"></button>
+            <button class="white-key A5-key"></button>
+            <button class="black-key Bb5-key"></button>
+            <button class="white-key B5-key"></button>
+          </div>
+          <br />
+          <input type="button" id="start_button" value="Start" />
+        </div>
+
+        <div class="container">
+          <!-- black radial gradient-->
+          <!-- AM -->
+          <div class="cell cell-1">
+            <p>AM</p>
+            <div>
+              <select id="am_waveform_menu">
+                <option value="sine">Sine</option>
+                <option value="triangle">Triangle</option>
+                <option value="square">Square</option>
+                <option value="sawtooth">Sawtooth</option>
+              </select>
+            </div>
+            <div class="mix-knob" style="align-self: right">
+              <!-- mix knob-->
+              <p style="color: #000; font-size: 0.5em; letter-spacing: 0.65em">
+                Mix
+              </p>
+              <input
+                type="range"
+                min="0"
+                max="1"
+                value="0.5"
+                step="0.1"
+                class="input-knob"
+                id="mix_knob"
+              /><span
+                id="mix_label_value"
+                style="font-size: 0.5em; letter-spacing: 0.5px"
+                >50%</span
+              ><br /><br />
+            </div>
+            <!------------------AM modulator slider-------------->
+            <div class="AM_modulator_slider" style="float: left">
+              <p style="font-size: 0.5em; letter-spacing: 0.1em">modulator</p>
+              <input
+                type="range"
+                min="0"
+                max="1250"
+                value="50"
+                step="10"
+                id="AM_modulator_slider"
+              /><span
+                id="AM_modulator_label_value"
+                style="font-size: 0.5em; letter-spacing: 0.5px"
+                >50 Hz.</span
+              >
+            </div>
+            <!------------------am modulator dropdown----------------->
+            <div>
+              <select id="am_modulator_menu">
+                <option value="sine">Sine</option>
+                <option value="triangle">Triangle</option>
+                <option value="square">Square</option>
+                <option value="sawtooth">Sawtooth</option>
+              </select>
+            </div>
+            <div class="inner-cell inner2">
+              <!-----------pitch and amplitude evelope: AM------->
+              <div class="envelopes amplitude-am">
+                <p
+                  style="font-size: 0.45em; letter-spacing: 1.5px; color: black"
+                >
+                  <!----------Amplitude------->
+                  ADSR
+                </p>
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="50"
+                  step="1"
+                  class="amp_env-slider"
+                  id="am_amp_attack_slider"
+                /><span
+                  id="am_amp_attack_label"
+                  style="color: black; font-size: 0.25em; letter-spacing: 0.5px"
+                  >attack</span
+                >
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="50"
+                  step="1"
+                  class="amp_env-slider"
+                  id="am_amp_decay_slider"
+                /><span
+                  id="am_amp_decay_label"
+                  style="color: black; font-size: 0.25em; letter-spacing: 0.5px"
+                  >decay</span
+                >
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="50"
+                  step="1"
+                  class="amp_env-slider"
+                  id="am_amp_sustain_slider"
+                /><span
+                  id="am_amp_sustain_label"
+                  style="color: black; font-size: 0.25em; letter-spacing: 0.5px"
+                  >sustain</span
+                >
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="50"
+                  step="1"
+                  class="amp_env-slider"
+                  id="am_amp_release_slider"
+                /><span
+                  id="am_amp_release_label"
+                  style="color: black; font-size: 0.25em; letter-spacing: 0.5px"
+                  >release</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!--```````````````````````````````````````````````````````````````````````````````````````````````````-->
+          <!--========================================= F M ====================================-->
+          <!--```````````````````````````````````````````````````````````````````````````````````````````````````-->
+
+          <div class="cell cell-2">
+            <p>FM</p>
+            <!------------fm carrier type dropdown-------------->
+            <div>
+              <select id="fm_waveform_menu">
+                <option value="sine">Sine</option>
+                <option value="triangle">Triangle</option>
+                <option value="square">Square</option>
+                <option value="sawtooth">Sawtooth</option>
+              </select>
+            </div>
+
+            <div class="master-knob">
+              <!-- master gain knob-->
+
+              <p style="color: #000; font-size: 0.5em; letter-spacing: 0.65em">
+                Master
+              </p>
+              <input
+                type="range"
+                min="0"
+                max="1"
+                value="0.5"
+                step="0.125"
+                class="input-knob"
+                id="master_gain_knob"
+              /><span
+                id="master_label_value"
+                style="text-align: right; font-size: 0.5em; letter-spacing: 1px"
+                >0.5</span
+              ><br /><br />
+            </div>
+            <!--fm modulator dropdown-->
+            <div>
+              <select id="fm_modulator_menu">
+                <option value="sine">Sine</option>
+                <option value="triangle">Triangle</option>
+                <option value="square">Square</option>
+                <option value="sawtooth">Sawtooth</option>
+              </select>
+            </div>
+            <!---------------------------FM modulator slider-------------->
+            <div class="FM_modulator_slider" style="float: left">
+              <p style="font-size: 0.5em; letter-spacing: 0.1em">modulator</p>
+              <input
+                type="range"
+                min="0"
+                max="3250"
+                value="50"
+                step="10"
+                id="FM_modulator_slider"
+              /><span
+                id="FM_modulator_label_value"
+                style="font-size: 0.5em; letter-spacing: 0.5px"
+                >50 hz</span
+              >
+            </div>
+            <!---------------------------FM modulator Node-------------->
+            <div class="FM_modulatorNode_slider">
+              <p style="font-size: 0.5em; letter-spacing: 0.1em">
+                modulator node
+              </p>
+              <input
+                type="range"
+                min="0"
+                max="3250"
+                value="500"
+                step="10"
+                id="FM_modulatorNode_slider"
+              /><span
+                id="FM_modulator_node_value"
+                style="font-size: 0.5em; letter-spacing: 0.5px"
+                >500</span
+              >
+            </div>
+            <div class="inner-cell inner1">
+              <!-----------pitch and amplitude evelope: FM------->
+              <div class="envelopes amplitude-fm">
+                <p
+                  style="font-size: 0.45em; letter-spacing: 1.5px; color: black"
+                >
+                  ADSR
+                </p>
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="50"
+                  step="1"
+                  class="amp_env-slider"
+                  id="fm_amp_attack_slider"
+                /><span
+                  id="fm_amp_attack_label"
+                  style="color: black; font-size: 0.25em; letter-spacing: 0.5px"
+                  >attack</span
+                >
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="50"
+                  step="1"
+                  class="amp_env-slider"
+                  id="fm_amp_decay_slider"
+                /><span
+                  id="fm_amp_decay_label"
+                  style="color: black; font-size: 0.25em; letter-spacing: 0.5px"
+                  >decay</span
+                >
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="50"
+                  step="1"
+                  class="amp_env-slider"
+                  id="fm_amp_sustain_slider"
+                /><span
+                  id="fm_amp_sustain_label"
+                  style="color: black; font-size: 0.25em; letter-spacing: 0.5px"
+                  >sustain</span
+                >
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="50"
+                  step="1"
+                  class="amp_env-slider"
+                  id="fm_amp_release_slider"
+                /><span
+                  id="fm_amp_release_label"
+                  style="color: black; font-size: 0.25em; letter-spacing: 0.5px"
+                  >release</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- import the webpage's javascript file -->
+  <script src="/script.js" defer></script>
+  <script src="/sound-api.js" chose></script>
+</html>

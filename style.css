@@ -1,0 +1,184 @@
+/* CSS files add styling rules to your content */
+/*
+colors:
+#F72585 - NEON PINK
+#B5179E - DARK PINK
+#7209B7 - PINKISH PURPLE
+#560BAD - PURPLE
+#480CA8 - DARK PURPLE
+#3A0CA3 - DEEP PURPLE
+#3F3C79 - PURPLISH BLUE
+#4361EE - DARK BLUE
+#4895EF - BLUE
+#4CC9F0 - NEON BLUE
+
+
+*/
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+p.title {
+  color: white;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+.plugin{
+  background-color: ; //*#F77984*/
+  width: fit-content;
+  text-align: center;
+  background-color: black;
+  background: radial-gradient(#3A0CA3, #000);
+  border-radius: 2em;
+}
+
+.container{
+  display: grid;
+  letter-spacing: 1em;
+  font-family: Georgia;
+  text-align: auto;
+  grid-gap: 2em 2em;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  
+  margin: 5em;
+  width: fit-content;
+  height: auto;
+  padding: 5em;
+  color: white;
+
+}
+.envelopes{
+  display: inline-block;
+  /*grid-template-columns: repeat(2, 1fr);
+  width: fit-content;*/
+
+}
+.cell {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 5px;
+  
+}
+.cell-1 {
+  background-color: #560BAD;
+  align-self: left;
+  font-size: 2em;
+  opacity: 0.8;
+}
+.cell-2 {
+  background-color: #4895EF;
+  font-size: 2em;
+  opacity: 0.8;
+}
+.cell-3 {
+  background: royalblue;
+}
+.cell-4 {
+  background: gold;
+}
+
+.cell-5 {
+  background: blueviolet;
+}
+/*
+.cell-6 {
+  background: limegreen;
+}
+.cell-7 {
+  background: coral;
+}
+.cell-8 {
+  background: lightseagreen;
+}
+.cell-9 {
+  background: maroon;
+}
+*/
+
+.inner-cell{
+  width: fit-content;
+  height: fit-content;
+  background: #FFFFFF;
+  border-radius: 0.5em;
+  padding-top: 0.35em;
+  padding-bottom: 0.5em;
+  display: inline-block;
+}
+
+.inner-cell .inner1{
+  padding-right: 2em;
+  padding-left: 0.7em;
+}
+.inner-cell .inner2{
+  padding-left: 2em;
+  padding-right: 0.7em;
+}
+
+.am_waveform_menu{
+  float: left;
+}
+.fm_waveform_menu{
+  float: left;
+}
+
+.piano_keys{
+  /*width: 3rem;
+  height: 5rem;*/
+/*   justify-items: top; */
+  display: flex;
+  width: 900px;
+  height:20%;
+/*   background-color: white; */
+  padding-left: 12%;
+}
+
+ button.white-key {
+  width: 25px;
+  height: 75px;
+}
+
+button.black-key {
+  width: 25px;
+  height: 50px;
+  background: red;
+} 
+
+.black-key{
+  position: relative;
+  width: 2rem;
+  height: 4rem;
+  background-color: #000;
+  border: 3px solid black;
+  border-radius: 0 0 2px 2px;
+  outline: none;
+  cursor: pointer;
+}
+ 
+
+
+/*
+#mix_knob{
+  float: right;
+}
+#master_gain_knob{
+  float: right;
+}
+#master_label_value{
+  text-align: right;
+}
+#mix_label_value{
+   text-align: right;
+}
+ .amp-env-slider::-webkit-slider-thumb{
+  opacity: 0.5;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+} */
